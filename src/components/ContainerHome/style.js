@@ -20,6 +20,16 @@ export const Container = styled.div`
         font-family: 'Encode Sans Semi Condensed', sans-serif;
         font-size: 1.5rem;
         color: #fff;
+        text-align: center;
+    }
+    @media (max-width: 700px) {
+        span{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1.30rem;
+            
+        }
     }
   
 `

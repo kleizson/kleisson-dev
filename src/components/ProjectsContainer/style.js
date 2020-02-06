@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import { css } from "@emotion/core";
+
+
+export const Override = css`
+  margin-top: 10%;
+`
 
 export const List = styled.ul` 
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 `
 
 export const ContainerCard = styled.div`

@@ -24,5 +24,9 @@ export const List = styled.ul`
     li{
         margin: 30px;
     }
-
+    @media (max-width:700px){
+        a{
+            font-size: 1.2rem;
+        }
+    }
 `

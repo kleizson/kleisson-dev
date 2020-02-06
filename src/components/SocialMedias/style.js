@@ -25,4 +25,9 @@ export const ContainerIcons = styled.div`
         color: #000; 
     }
 
+    @media (max-width: 700px){
+        &{
+            margin-top: 25%;
+        }
+    }
 `

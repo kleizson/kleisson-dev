@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { api } from '../../services/ApiGitHub'
-import { List, ContainerCard } from './style'
+import { List, ContainerCard, Override } from './style'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import ClipLoader from "react-spinners/ClipLoader"
+
+
+
 
 export default () => {
 
     const [reposName, setReposName] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     async function loadrepos(){
         const response = await api.get('/users/kleizson/repos')
@@ -30,12 +35,20 @@ export default () => {
     }
     
     useEffect(() => {
-        loadrepos()
-    })
+        setLoading(true)
+        loadrepos().then( () =>{
+            setLoading(false)
+        }).catch((err) => {
+            alert(err)
+            setLoading(false)
+        })
+            
+    }, [])
 
     return (
         <List>
             {reposName}
+            <ClipLoader size={60} css={Override} color={"#7F0F99"} loading={loading} />
         </List>
         )
 }

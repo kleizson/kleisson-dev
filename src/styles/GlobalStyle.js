@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        background-color: #b9bae0;
         animation: 2s ${animation};
         background-image: url('./img/bg.jpg');
         background-size: cover;
