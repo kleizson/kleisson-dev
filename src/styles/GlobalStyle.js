@@ -13,7 +13,8 @@ export const GlobalStyle = createGlobalStyle`
         animation: 2s ${animation};
         background-image: url('./img/bg.jpg');
         background-size: cover;
-        
+        background-repeat: no-repeat;
+        height: 100vh;
     }
     div{
         animation-name: transitionOpacity;

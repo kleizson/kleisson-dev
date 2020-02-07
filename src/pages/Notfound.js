@@ -1,3 +1,7 @@
 import React from 'react'
+import Notfound from '../components/NotFound/index'
 
-export default () => <h1>Vai pa onde?</h1>
+
+export default () => (
+    <Notfound />
+)

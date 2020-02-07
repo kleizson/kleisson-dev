@@ -55,4 +55,14 @@ export const ContainerCard = styled.div`
     #svg:hover{
         transform: translateX(10px);
     }
+    @media (max-width: 700px){
+        div{
+            height: 225px;
+            width: 130px;
+        }
+        span, h2{
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+    }
 `
